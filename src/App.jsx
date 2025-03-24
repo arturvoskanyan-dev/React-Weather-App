@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Header } from "./components/index"
+import {Header, Main} from "./components/index"
 import './App.css'
 
 function App() {
@@ -21,6 +21,12 @@ function App() {
           data
             ? <div className='p-4'>
               <Header text={text} setText={setText} setIsSearch={setIsSearch} isSearch={isSearch} />
+              <Main data={data.current} />
+              <h1>{data.location.country}</h1>
+              <h1>{data.location.name}</h1>
+              <h1>{data.current.dewpoint_c}</h1>
+              <h1>{data.current.humidity}%</h1>
+              <h1>{data.current.gust_kph}</h1>
             </div>
             : <h1>Loading...</h1>
         }
