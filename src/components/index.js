@@ -2,18 +2,16 @@
 
 import Header from "./Header/Header";
 import Main from "./Main/Main";
+import Footer from "./Footer/Footer"
 
-export {Header, Main}
+export {Header, Main, Footer}
 
 /* Header */
 
 import { IoSearch } from "react-icons/io5";
-import { FaWind } from "react-icons/fa6";
-import { WiHumidity } from "react-icons/wi";
-import { RiCelsiusLine } from "react-icons/ri";
 import { FaMapMarkerAlt } from "react-icons/fa";
 
-export {IoSearch, FaWind, WiHumidity, RiCelsiusLine, FaMapMarkerAlt}
+export {IoSearch, FaMapMarkerAlt}
 
 /* Main */
 
@@ -27,3 +25,10 @@ import notFound from "../assets/404.png"
 import { RiCelsiusFill } from "react-icons/ri";
 
 export {cloud, rain, snow, mist, clear, Partly, notFound, RiCelsiusFill}
+
+/* Footer */
+
+import { WiHumidity } from "react-icons/wi";
+import { FaWind } from "react-icons/fa6";
+
+export {WiHumidity, FaWind}
