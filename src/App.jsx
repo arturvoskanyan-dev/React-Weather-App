@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import {Header, Main, Footer} from "./components/index"
+import { Header, Main, Footer, notFound, NotFound } from "./components/index"
 import './App.css'
 
 function App() {
@@ -15,19 +15,19 @@ function App() {
   }, [isSearch])
 
   return (
-    <div className='flex justify-center items-center h-screen'>
+    <section className='flex justify-center items-center h-screen'>
       <div className='bg-white max-w-xl w-[100%] h-2xl rounded-2xl'>
         {
-          data
+          data?.current
             ? <div className='p-4'>
               <Header text={text} setText={setText} setIsSearch={setIsSearch} isSearch={isSearch} />
               <Main data={data.current} />
               <Footer data={data.current} />
             </div>
-            : <h1>Loading...</h1>
+            : <NotFound text={text} setText={setText} setIsSearch={setIsSearch} isSearch={isSearch} />
         }
       </div>
-    </div>
+    </section>
   );
 }
 

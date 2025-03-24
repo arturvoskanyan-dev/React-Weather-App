@@ -8,7 +8,7 @@ const Header = ({ text, setText, setIsSearch, isSearch }) => {
                 <span className='mr-1.5'><FaMapMarkerAlt /></span>
                 <span>{text}</span>
             </div>
-            <form className='flex items-center max-w-xs w-full' onSubmit={(e) => {e.preventDefault(); setIsSearch(!isSearch)}}>
+            <form className='flex items-center max-w-xs w-full' onSubmit={(e) => {e.preventDefault(); text && setIsSearch(!isSearch)}}>
                 <input
                     type="text"
                     value={text}
@@ -18,7 +18,7 @@ const Header = ({ text, setText, setIsSearch, isSearch }) => {
                 <span>
                     <IoSearch
                         type='submit'
-                        onClick={() => setIsSearch(!isSearch)}
+                        onClick={() => text && setIsSearch(!isSearch)}
                         className='p-2 text-4xl text-blue-950 bg-blue-300 rounded-full cursor-pointer'
                     />
                 </span>

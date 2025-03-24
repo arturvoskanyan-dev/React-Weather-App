@@ -22,7 +22,7 @@ const Main = ({ data }) => {
     }
 
     return (
-        <main className='flex flex-col items-center gap-4'>
+        <main className='flex flex-col items-center gap-4 p-4'>
             <img
                 src={foo()}
                 className='w-1/2'
